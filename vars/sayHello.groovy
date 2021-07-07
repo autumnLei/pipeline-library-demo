@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
-def call(String name = 'human') {
-  echo "Hello, ${name}."
+def call() {
+//  echo "Hello, ${name}."
   echo "BUILD_NUMBER: ${BUILD_NUMBER}"
   echo "env.BUILD_NUMBER: ${env.BUILD_NUMBER}"
   echo "gitlabSourceBranch: ${gitlabSourceBranch}"
