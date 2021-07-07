@@ -5,6 +5,8 @@ import com.cleverbuilder.SampleClass
 
 pipeline {
     agent any
+    def name = "name"
+    name1 = "name1"
     stages {
         stage('Demo') {
             steps {

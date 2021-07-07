@@ -8,6 +8,8 @@ def call(String name = 'human') {
   echo "env.gitlabSourceBranch: ${env.gitlabSourceBranch}"
   echo "email: ${email}"
   echo "env.email: ${env.email}"
+  echo "name: ${name}"
+  echo "name1: ${name1}"
   parallel codeScan: {
     sh "echo this is codeScan"
   }, apkScan: {
@@ -20,7 +22,7 @@ def call(String name = 'human') {
   try {
     sh "exit 1"
   } catch (exc) {
-    error "${exc}"
+    unstable "${exc}"
   }
 }
 
