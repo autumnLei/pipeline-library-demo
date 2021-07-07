@@ -9,7 +9,7 @@ def call() {
   echo "email: ${email}"
   echo "env.email: ${env.email}"
   echo "name: ${name}"
-  echo "name1: ${name1}"
+//  echo "name1: ${name1}"
   parallel codeScan: {
     sh "echo this is codeScan"
   }, apkScan: {
